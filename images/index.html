@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Event Card</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #ffffff;
+}
+img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+a {
+    font-size: 20px;
+    margin-top: 20px;
+    display: block;
+    color: #0066ff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<script>
+// list of images inside /images folder
+const images = [
+    "pic1.jpeg",
+    "pic2.jpeg",
+    "pic3.jpeg",
+    "pic4.jpeg",
+    "pic5.jpeg"
+];
+
+// choose one randomly
+const randomPic = images[Math.floor(Math.random() * images.length)];
+
+// display selected picture + store link
+document.write(`
+    <img src="images/${randomPic}" alt="Card Image">
+    <br><br>
+    <a href="https://sn97.easy.co/" target="_blank">Visit Store</a>
+`);
+</script>
+
+</body>
+</html>
