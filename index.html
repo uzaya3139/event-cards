@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Event Card</title>
+<title>Sn97 Event Card</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -9,47 +9,75 @@ body {
     text-align: center;
     font-family: Arial, sans-serif;
     padding: 20px;
-    background: #ffffff;
+    background: #fafafa;
 }
-img {
-    max-width: 90%;
+
+.container {
+    margin-top: 40px;
+}
+
+.card-img {
+    max-width: 85%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
-a {
-    font-size: 20px;
-    margin-top: 20px;
-    display: block;
-    color: #0066ff;
+
+.button {
+    margin-top: 25px;
+    padding: 14px 22px;
+    background: #007bff;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
     text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.2s;
 }
-a:hover {
-    text-decoration: underline;
+
+.button:hover {
+    background: #005fcc;
+}
+
+.link-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
 }
 </style>
 </head>
+
 <body>
+
+<div class="container">
 
 <script>
 // list of images inside /images folder
 const images = [
     "pic1.jpeg",
     "pic2.jpeg",
-    "pic3.jpeg",
-    "pic4.jpeg",
-    "pic5.jpeg"
 ];
 
-// choose one randomly
+// pick random picture
 const randomPic = images[Math.floor(Math.random() * images.length)];
 
-// display selected picture + store link
+// write picture + button
 document.write(`
-    <img src="images/${randomPic}" alt="Card Image">
-    <br><br>
-    <a href="https://sn97.easy.co/" target="_blank">Visit Sn97.co <br> https://sn97.easy.co/ </a>
+    <img class="card-img" src="images/${randomPic}" alt="Card Image">
+
+    <div class="link-text">
+        Visit Sn97.co
+    </div>
+
+    <a class="button" href="https://sn97.easy.co/" target="_blank">
+        https://sn97.easy.co/
+    </a>
+
 `);
 </script>
+
+</div>
 
 </body>
 </html>
